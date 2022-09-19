@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'FLDjangoServer.server.apps.FldjangoserverConfig'
+    'FLDjangoServer.apps.FldjangoserverConfig'
 ]
 
 MIDDLEWARE = [

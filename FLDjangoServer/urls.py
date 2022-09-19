@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from FLDjangoServer.server import views
+from FLDjangoServer import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.getAll),
+    path('', views.getAll),
     path('insert/', views.insertRow)
 ]
