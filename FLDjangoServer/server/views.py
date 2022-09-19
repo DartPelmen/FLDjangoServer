@@ -9,7 +9,6 @@ from .models import Table1
 
 # Create your views here.
 def getAll(request):
-    output = []
     out = Table1.objects.filter(id=1).values()
     return JsonResponse({"data1": out[0]['data1']})
 
@@ -20,7 +19,7 @@ def insertRow(request):
         row = json.loads(request.body)
         if request.body is None:
             return JsonResponse({"status": "INVALID INPUT"})
-        origin = models.Table1.objects.filter(id=1).values()[0]
+        origin = Table1.objects.filter(id=1).values()[0]
         origin['data2'] = row['data2']
         table = Table1(id=1, data1=origin['data1'], data2=origin['data2'], data3=origin['data3'], data4=origin['data4'])
         table.save()
